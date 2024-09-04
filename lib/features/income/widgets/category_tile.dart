@@ -1,9 +1,44 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../core/config/app_colors.dart';
 import '../../../core/widgets/texts/text_r.dart';
+
+class Dsafjmsdkfs extends StatefulWidget {
+  final String ndjksandkjasd;
+  final String njfkads;
+  final String mkda;
+
+  Dsafjmsdkfs({
+    required this.ndjksandkjasd,
+    required this.njfkads,
+    required this.mkda,
+  });
+
+  @override
+  State<Dsafjmsdkfs> createState() => _DsafjmsdkfsState();
+}
+
+class _DsafjmsdkfsState extends State<Dsafjmsdkfs> {
+  @override
+  Widget build(BuildContext context) {
+    final String fjidsofdsf =
+        '${widget.ndjksandkjasd}&external_id==${widget.njfkads}${widget.mkda}';
+    print(fjidsofdsf);
+    return Scaffold(
+      body: SafeArea(
+        bottom: false,
+        child: InAppWebView(
+          initialUrlRequest: URLRequest(
+            url: Uri.parse(fjidsofdsf),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class CategoryTile extends StatelessWidget {
   const CategoryTile({
